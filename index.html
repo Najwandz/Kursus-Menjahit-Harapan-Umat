@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursus Menjahit Harapan Umat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header" id="main-header">
+        <div class="container nav-container">
+            <div class="logo">Harapan Umat.</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="smooth-scroll">Beranda</a></li>
+                    <li><a href="#galeri" class="smooth-scroll">Galeri & Karya</a></li>
+                    <li><a href="#testimoni" class="smooth-scroll">Testimoni</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Kuasai Keterampilan Menjahit <br> <span>Mandiri & Profesional</span></h1>
+            <p>Bergabunglah dengan Kursus Menjahit Harapan Umat. Mulai dari nol hingga mahir membuat pola dan busana yang rapi dan siap jual.</p>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn-primary">Tanya Kelas via WA</a>
+        </div>
+    </section>
+
+    <section id="galeri" class="galeri">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeri Kegiatan & Karya</h2>
+                <p>Momen belajar dan hasil jahitan dari para peserta kursus Harapan Umat.</p>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="semua">Semua</button>
+                <button class="filter-btn" data-filter="kegiatan">Kegiatan Belajar</button>
+                <button class="filter-btn" data-filter="karya">Hasil Karya</button>
+            </div>
+
+            <div class="grid-container">
+                <div class="card" data-category="kegiatan">
+                    <div class="card-image">
+                        <img src="gambar-kegiatan-1.jpg" alt="Suasana Belajar Menjahit" onerror="this.src='https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80'">
+                        <span class="badge">Kelas Pola</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Praktek Membuat Pola Dasar</h3>
+                        <p class="author">Suasana kelas yang fokus dan nyaman.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-category="karya">
+                    <div class="card-image">
+                        <img src="gambar-baju-1.jpg" alt="Hasil Karya Baju" onerror="this.src='https://images.unsplash.com/photo-1550614000-4b95dd2449bb?auto=format&fit=crop&w=600&q=80'">
+                        <span class="badge">Hasil Karya</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Pembuatan Setelan Tunik</h3>
+                        <p class="author">Hasil jahitan rapi dari peserta tingkat lanjut.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-category="kegiatan">
+                    <div class="card-image">
+                        <img src="gambar-kegiatan-2.jpg" alt="Praktek Mesin Jahit" onerror="this.src='https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80'">
+                        <span class="badge">Praktek Mesin</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Pengenalan Mesin Jahit</h3>
+                        <p class="author">Pendampingan langsung oleh instruktur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="testimoni">
+        <div class="container">
+            <div class="section-title">
+                <h2>Apa Kata Mereka?</h2>
+                <p>Kisah sukses dari peserta Kursus Menjahit Harapan Umat.</p>
+            </div>
+
+            <div class="testimoni-grid">
+                <div class="testimoni-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="review">"Alhamdulillah, awalnya sama sekali nggak ngerti pegang mesin jahit. Setelah ikut kursus di Harapan Umat, sekarang saya sudah bisa nerima orderan jahit baju tetangga. Instrukturnya sangat sabar."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Ibu Siti</h4>
+                            <p>Ibu Rumah Tangga / Alumni</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimoni-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="review">"Materi pecah polanya sangat mudah dipahami. Suasana belajarnya kekeluargaan banget. Sekarang saya sudah pede bikin baju seragam keluarga sendiri buat Lebaran."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Nisa</h4>
+                            <p>Mahasiswi / Peserta Kelas Mahir</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimoni-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="review">"Tempat kursus yang sangat *recommended*! Mesin jahitnya lengkap, diajarin dari motong kain sampai *finishing* yang rapi. Cocok banget buat yang mau buka usaha butik/tailor."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Rina Rahmawati</h4>
+                            <p>Pemilik Usaha Jahit Rumahan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Hubungi kami di WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
