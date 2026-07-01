@@ -702,3 +702,43 @@ body {
         justify-content: center;
     }
 }
+/* --- Perbaikan Responsif Mobile (Update Terbaru) --- */
+@media (max-width: 768px) {
+    /* 1. Mencegah konten meluber ke kanan */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* 2. Memastikan semua grid jadi 1 kolom di HP */
+    .grid-container, 
+    .testimoni-grid, 
+    .footer-container {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* 3. Perbaiki padding container agar tidak terlalu mepet */
+    .container {
+        padding: 0 15px !important;
+    }
+
+    /* 4. Perbaiki tampilan Galeri agar gambar tidak terpotong */
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* 5. Perbaiki Navigasi agar tidak menumpuk */
+    .nav-links {
+        display: none; /* Kamu bisa pertimbangkan pakai menu hamburger nanti */
+    }
+
+    /* 6. Perbaiki Footer agar teks tidak berantakan */
+    .footer-col {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
