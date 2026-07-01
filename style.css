@@ -1,4 +1,6 @@
-/* --- Reset & Base Styles --- */
+/* =========================================
+   1. RESET & BASE STYLES
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +8,13 @@
 }
 
 :root {
-    --color-bg: #FAF7F2;      /* Krem Hangat */
-    --color-text: #333333;    /* Abu Gelap */
-    --color-primary: #5A3E2B; /* Cokelat Gelap */
-    --color-accent: #B8860B;  /* Emas Gelap */
+    /* Palet Warna Tema "Community Guild" (Modern & Elegan) */
+    --color-bg: #fcfbf8;          /* Krem sangat muda */
+    --color-text: #333333;        /* Teks Abu Gelap */
+    --color-heading: #222222;     /* Teks Heading Hitam Lembut */
+    --color-primary: #5A3E2B;     /* Cokelat Gelap (Brand) */
+    --color-accent: #d8a860;      /* Kuning Oker / Mustard */
+    --color-accent-dark: #b58d55; /* Oker Gelap / Emas untuk Hover */
     --color-white: #FFFFFF;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Poppins', sans-serif;
@@ -28,9 +33,11 @@ body {
     padding: 0 20px;
 }
 
-/* --- Header & Navigasi --- */
+/* =========================================
+   2. HEADER & NAVIGASI
+   ========================================= */
 .header {
-    background-color: rgba(250, 247, 242, 0.98);
+    background-color: rgba(255, 255, 255, 0.98);
     position: fixed;
     width: 100%;
     top: 0;
@@ -71,326 +78,166 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--color-accent);
+    color: var(--color-accent-dark);
 }
 
-/* --- Hero Section --- */
-.hero {
+/* =========================================
+   3. HERO SECTION (MODERN EDITORIAL)
+   ========================================= */
+.hero-modern {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(250, 247, 242, 0.8), rgba(250, 247, 242, 0.9)), 
-                url('https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1920&q=80') center/cover;
-    padding-top: 80px;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.hero h1 {
-    font-family: var(--font-heading);
-    font-size: 3.5rem;
-    color: var(--color-primary);
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.hero h1 span {
-    font-style: italic;
-    color: var(--color-accent);
-}
-
-.hero p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 40px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.btn-primary {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 15px 35px;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 4px;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: var(--color-accent);
-    transform: translateY(-2px);
-}
-
-/* --- Section Galeri --- */
-.galeri {
-    padding: 100px 0;
-    background-color: var(--color-white);
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title h2 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    color: var(--color-primary);
-    margin-bottom: 10px;
-}
-
-.section-title p {
-    color: #666;
-}
-
-/* Filter Buttons */
-.filter-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    background: transparent;
-    border: 1px solid var(--color-primary);
-    color: var(--color-primary);
-    padding: 8px 24px;
-    font-family: var(--font-body);
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-}
-
-.filter-btn:hover, .filter-btn.active {
-    background: var(--color-primary);
-    color: var(--color-white);
-}
-
-/* Card Grid */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: var(--color-bg);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    /* Perbaikan state animasi awal */
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.card:hover {
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-.card.hide {
-    display: none;
-}
-
-.card-image {
+    background-color: var(--color-bg);
+    padding-top: 100px;
+    padding-bottom: 50px;
     position: relative;
-    height: 350px;
     overflow: hidden;
 }
 
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
 }
 
-.card:hover .card-image img {
-    transform: scale(1.1); /* Efek Hover Zoom */
-}
-
-.badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background-color: var(--color-accent);
-    color: var(--color-white);
-    padding: 5px 12px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 3px;
+/* Kiri: Teks */
+.hero-text-box {
+    flex: 1;
+    max-width: 600px;
     z-index: 2;
 }
 
-.card-content {
-    padding: 20px;
-    text-align: center;
+.hero-subtitle {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent-dark);
+    margin-bottom: 20px;
+    background-color: rgba(184, 134, 11, 0.1);
+    padding: 8px 16px;
+    border-radius: 30px;
 }
 
-.card-content h3 {
+.hero-text-box h1 {
     font-family: var(--font-heading);
-    font-size: 1.3rem;
+    font-size: 4rem;
+    line-height: 1.15;
     color: var(--color-primary);
-    margin-bottom: 5px;
-}
-
-.card-content .author {
-    font-size: 0.9rem;
-    color: #777;
-}
-
-/* --- Section Pendaftaran Placeholder --- */
-.pendaftaran {
-    padding: 80px 0;
-    text-align: center;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-}
-
-.pendaftaran h2 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-/* --- Floating WhatsApp Button --- */
-.wa-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 35px;
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    animation: pulse-animation 2s infinite;
-    transition: background-color 0.3s ease;
-}
-
-.wa-float:hover {
-    background-color: #128C7E;
-}
-
-@keyframes pulse-animation {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-
-/* --- Perbaikan Responsiveness (Mobile) --- */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    
-    /* Perbaikan Menu Navigasi di Mobile agar tidak hilang */
-    .nav-container {
-        flex-direction: column;
-        justify-content: center;
-        gap: 15px;
-    }
-    .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    /* Penyesuaian jarak karena header menjadi lebih tinggi di mobile */
-    .hero { padding-top: 130px; }
-}
-/* --- NEW: Section Testimoni --- */
-.testimoni {
-    padding: 100px 0;
-    background-color: var(--color-bg); /* Latar krem agar beda dengan galeri */
-}
-
-.testimoni-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.testimoni-card {
-    background-color: var(--color-white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.testimoni-card:hover {
-    transform: translateY(-5px);
-}
-
-.quote-icon {
-    font-size: 30px;
-    color: var(--color-accent);
-    opacity: 0.3;
-    margin-bottom: 15px;
-}
-
-.review {
-    font-size: 0.95rem;
-    color: #555;
-    font-style: italic;
-    line-height: 1.8;
     margin-bottom: 25px;
 }
 
-.reviewer-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
+.hero-text-box h1 span {
+    color: var(--color-accent);
+    font-style: italic;
 }
 
-.reviewer-avatar {
-    width: 45px;
-    height: 45px;
+.hero-text-box p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+/* Tombol Aksi */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     background-color: var(--color-primary);
     color: var(--color-white);
-    border-radius: 50%;
-    display: flex;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(184, 134, 11, 0.2);
+}
+
+.btn-outline {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    font-size: 20px;
-}
-
-.reviewer-info h4 {
-    font-size: 1rem;
-    font-family: var(--font-heading);
     color: var(--color-primary);
-    margin-bottom: 3px;
+    padding: 15px 0;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
 }
 
-.reviewer-info p {
-    font-size: 0.8rem;
-    color: #888;
+.btn-outline:hover {
+    color: var(--color-accent-dark);
+    border-bottom: 2px solid var(--color-accent-dark);
 }
-/* --- NEW: Section Tentang Kami --- */
+
+/* Kanan: Gambar Estetik (Arch Shape) */
+.hero-image-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image-wrapper img {
+    width: 90%;
+    max-width: 450px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 250px 250px 20px 20px;
+    box-shadow: -15px 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Elemen Dekoratif Badge */
+.experience-badge {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: float 4s ease-in-out infinite;
+}
+
+.experience-badge .stars {
+    color: var(--color-accent);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.experience-badge p {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0;
+    line-height: 1.3;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* =========================================
+   4. TENTANG KAMI
+   ========================================= */
 .tentang {
     padding: 100px 0;
     background-color: var(--color-white);
@@ -435,7 +282,7 @@ body {
 }
 
 .tentang-list i {
-    color: var(--color-accent);
+    color: var(--color-accent-dark);
     font-size: 1.2rem;
 }
 
@@ -457,9 +304,401 @@ body {
     transform: scale(1.05);
 }
 
-/* Responsiveness tambahan untuk HP */
-@media (max-width: 900px) {
+/* =========================================
+   5. GALERI & KARYA
+   ========================================= */
+.galeri {
+    padding: 100px 0;
+    background-color: var(--color-bg);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 8px 24px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.card.hide {
+    display: none;
+}
+
+.card-image {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--color-accent-dark);
+    color: var(--color-white);
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.card-content .author {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* =========================================
+   6. TESTIMONI
+   ========================================= */
+.testimoni {
+    padding: 100px 0;
+    background-color: var(--color-white); 
+}
+
+.testimoni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimoni-card {
+    background-color: var(--color-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.testimoni-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-icon {
+    font-size: 30px;
+    color: var(--color-accent);
+    opacity: 0.3;
+    margin-bottom: 15px;
+}
+
+.review {
+    font-size: 0.95rem;
+    color: #555;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.reviewer-avatar {
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.reviewer-info h4 {
+    font-size: 1rem;
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: 3px;
+}
+
+.reviewer-info p {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* =========================================
+   7. FOOTER & COPYRIGHT
+   ========================================= */
+.footer {
+    background-color: #fcfcfc;
+    padding-top: 70px;
+    border-top: 1px solid #eaeaea;
+    color: #444;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-col h4 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.brand-col .footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:nth-child(1):hover { background-color: #1877F2; } 
+.social-links a:nth-child(2):hover { background-color: #000000; } 
+.social-links a:nth-child(3):hover { background-color: #0A66C2; } 
+.social-links a:nth-child(4):hover { background-color: #E4405F; } 
+.social-links a:nth-child(5):hover { background-color: #FF0000; } 
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 15px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--color-accent-dark);
+}
+
+.wa-text {
+    font-weight: 600;
+    color: var(--color-primary) !important;
+    margin-top: 10px;
+}
+
+.footer-bottom {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   8. WHATSAPP FLOATING BUTTON
+   ========================================= */
+.wa-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    animation: pulse-animation 2s infinite;
+    transition: background-color 0.3s ease;
+}
+
+.wa-float:hover {
+    background-color: #128C7E;
+}
+
+@keyframes pulse-animation {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* =========================================
+   9. MEDIA QUERIES (RESPONSIVE)
+   ========================================= */
+@media (max-width: 992px) {
+    /* Hero */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        margin-top: 30px;
+    }
+    .hero-text-box h1 {
+        font-size: 3.2rem;
+    }
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .hero-image-wrapper {
+        justify-content: center;
+        width: 100%;
+    }
+    .experience-badge {
+        left: 0;
+        bottom: 20px;
+    }
+    
+    /* Tentang Kami */
     .tentang-wrapper {
         flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero-modern { 
+        padding-top: 150px; 
+    }
+    .hero-text-box h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+    .social-links {
+        justify-content: center;
     }
 }
