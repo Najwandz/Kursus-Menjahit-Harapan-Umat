@@ -1,4 +1,15 @@
+/* SUNTIKAN FONT GOOGLE LANGSUNG DI CSS */
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+
 /* -------------------------------------------------------------------------- */
+/* GLOBAL STYLES & RESET                                                      */
+/* -------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ... sisa kode css Anda di bawahnya ... *//* -------------------------------------------------------------------------- */
 /* GLOBAL STYLES & RESET                                                      */
 /* -------------------------------------------------------------------------- */
 * {
@@ -164,7 +175,7 @@ img {
 }
 
 /* -------------------------------------------------------------------------- */
-/* 2. HEADER / NAVBAR STYLES                                                 */
+/* 2. HEADER / NAVBAR STYLES                                                  */
 /* -------------------------------------------------------------------------- */
 .main-header {
     background-color: white;
@@ -228,7 +239,6 @@ img {
 /* -------------------------------------------------------------------------- */
 .hero-section {
     position: relative;
-    /* High quality sewing/tailoring banner placeholder image */
     background: url('https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
     height: 520px;
     display: flex;
@@ -253,25 +263,30 @@ img {
     color: white;
 }
 
+/* PERUBAHAN DI SINI: Menggunakan Syncopate untuk look Modern/Minimalis/Wide dengan !important */
 .hero-title {
-    font-size: 52px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    margin-bottom: 5px;
-    /* Mimic the unique tech font structure if needed, or stick to ultra-bold Poppins */
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    font-family: 'Syncopate', sans-serif !important;
+    font-size: 42px; 
+    font-weight: 700;
+    letter-spacing: 8px; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #ffffff; 
+    line-height: 1.4;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.4); 
 }
-
 .hero-subtitle {
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 5px;
     margin-bottom: 40px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
 /* -------------------------------------------------------------------------- */
-/* 4. ABOUT SECTION STYLES                                                   */
+/* 4. ABOUT SECTION STYLES                                                    */
 /* -------------------------------------------------------------------------- */
 .about-section {
     padding: 70px 0;
@@ -324,7 +339,7 @@ img {
 }
 
 /* -------------------------------------------------------------------------- */
-/* 5. BENEFITS SECTION STYLES                                                */
+/* 5. BENEFITS SECTION STYLES                                                 */
 /* -------------------------------------------------------------------------- */
 .benefits-section {
     padding: 75px 0;
@@ -416,7 +431,7 @@ img {
 }
 
 /* -------------------------------------------------------------------------- */
-/* 7. PROGRAMS SECTION STYLES                                                */
+/* 7. PROGRAMS SECTION STYLES                                                 */
 /* -------------------------------------------------------------------------- */
 .programs-section {
     padding: 75px 0;
@@ -464,11 +479,11 @@ img {
     color: #666666;
     line-height: 1.6;
     margin-bottom: 30px;
-    height: 100px; /* Aligns buttons uniformly */
+    height: 100px;
 }
 
 /* -------------------------------------------------------------------------- */
-/* 8. LEGALITY SECTION STYLES                                               */
+/* 8. LEGALITY SECTION STYLES                                                 */
 /* -------------------------------------------------------------------------- */
 .legalitas-section {
     padding: 55px 0;
@@ -596,7 +611,7 @@ img {
 }
 
 /* -------------------------------------------------------------------------- */
-/* RESPONSIVE DESIGN (MEDIA QUERIES)                                         */
+/* RESPONSIVE DESIGN (MEDIA QUERIES)                                          */
 /* -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
     .benefits-grid, .programs-grid {
@@ -608,19 +623,21 @@ img {
     .about-container {
         flex-direction: column;
     }
-    .hero-title {
-        font-size: 40px;
-    }
 }
 
+/* Perbaikan penyesuaian font saat dibuka di layar HP */
 @media (max-width: 768px) {
     .main-nav {
-        display: none; /* Can be replaced with a hamburger menu */
+        display: none; 
     }
     .benefits-grid, .programs-grid, .footer-grid {
         grid-template-columns: 1fr;
     }
     .top-bar {
         display: none;
+    }
+    .hero-title {
+        font-size: 28px;
+        letter-spacing: 4px;
     }
 }
