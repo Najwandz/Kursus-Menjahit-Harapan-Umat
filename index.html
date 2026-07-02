@@ -2,245 +2,240 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kursus Menjahit Harapan Umat</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
+    <!-- Google Fonts: Poppins for modern clean look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for professional icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
+    <!-- Link to external CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header & Navigasi -->
-    <header class="header" id="main-header">
-        <div class="container nav-container">
-            <div class="logo">Kursus Menjahit Harapan Umat.</div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#hero" class="smooth-scroll">Beranda</a></li>
-                    <li><a href="#tentang" class="smooth-scroll">Tentang Kami</a></li>
-                    <li><a href="#galeri" class="smooth-scroll">Galeri & Karya</a></li>
-                    <li><a href="#testimoni" class="smooth-scroll">Testimoni</a></li>
+    <!-- 1. TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-left">
+                <a href="tel:+6281224074427"><i class="fa-solid fa-phone"></i> +62 812-2407-4427</a>
+                <a href="mailto:harapanumat@gmail.com"><i class="fa-solid fa-envelope"></i> harapanumat@gmail.com</a>
+            </div>
+            <div class="top-bar-right">
+                <span class="lang-selector"><i class="fa-solid fa-globe"></i> Bahasa Indonesia <i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. HEADER / NAVBAR -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-circle-nodes"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>HARAPAN UMAT</h1>
+                    <p>KURSUS MENJAHIT & TATA BUSANA</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">Beranda</a></li>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                    <li><a href="#legalitas">Legalitas</a></li>
+                    <li><a href="#program">Program <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                    <li><a href="#galeri">Galeri</a></li>
                 </ul>
             </nav>
+            <div class="header-cta">
+                <a href="#daftar" class="btn btn-outline">Daftar Sekarang</a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section (Tema: Modern Editorial Asimetris) -->
-    <section id="hero" class="hero-modern">
+    <!-- 3. HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="container hero-container">
-            <!-- Bagian Kiri: Teks -->
-            <div class="hero-text-box">
-                <span class="hero-subtitle"><i class="fa-solid fa-thread"></i> Langkah Awalmu di Dunia Fashion</span>
-                <h1>Kuasai Keterampilan Menjahit <br> <span>Mandiri & Profesional</span></h1>
-                <p>Bergabunglah dengan Kursus Menjahit Harapan Umat. Mulai dari nol hingga mahir membuat pola dan busana yang rapi, berkelas, dan siap jual.</p>
-                
-                <div class="hero-buttons">
-                    <a href="https://wa.me/6288223391250" target="_blank" rel="noopener noreferrer" class="btn-primary">
-                        <i class="fa-brands fa-whatsapp"></i> Tanya Kelas via WA
-                    </a>
-                    <a href="#tentang" class="btn-outline smooth-scroll">Jelajahi Kursus</a>
-                </div>
+            <h2 class="hero-title">HARAPAN UMAT</h2>
+            <p class="hero-subtitle">KREATIF, TERAMPIL, MANDIRI BERSAMA</p>
+            <a href="#program" class="btn btn-primary">Mulai Sekarang</a>
+        </div>
+    </section>
+
+    <!-- 4. PROFILE / ABOUT SECTION -->
+    <section id="tentang" class="about-section">
+        <div class="container about-container">
+            <div class="about-image">
+                <!-- Placeholder for high quality image matching style -->
+                <img src="https://images.unsplash.com/photo-1524295928322-4b9862293353?auto=format&fit=crop&w=600&q=80" alt="Tentang Kami">
             </div>
+            <div class="about-content">
+                <span class="section-tag">COMPANY PROFILE</span>
+                <h3 class="section-title">Tentang LPK Harapan Umat</h3>
+                <p class="section-desc">
+                    LPK Harapan Umat adalah lembaga pendidikan keterampilan kerja tata busana dan menjahit yang berdiri berkomitmen tinggi untuk melahirkan generasi muda Indonesia yang terampil, mandiri, dan siap kerja di industri fashion nasional maupun internasional serta dibekali dengan kompetensi wirausaha yang unggul.
+                </p>
+                <a href="#selengkapnya" class="btn btn-purple">Lihat Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. BENEFITS SECTION -->
+    <section class="benefits-section">
+        <div class="container text-center">
+            <h3 class="section-title-center">Benefit LPK Harapan Umat</h3>
+            <p class="section-subtitle-center">Kami menawarkan berbagai manfaat yang dirancang untuk mempersiapkan Anda menghadapi dunia kerja dengan keterampilan menjahit yang unggul.</p>
             
-            <!-- Bagian Kanan: Gambar Estetik -->
-            <div class="hero-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800&auto=format&fit=crop" alt="Suasana Kelas Menjahit">
-                
-                <!-- Elemen Pemanis / Badge Modern -->
-                <div class="experience-badge">
-                    <div class="stars">★★★★★</div>
-                    <p>Terpercaya &<br>Berpengalaman</p>
+            <div class="benefits-grid">
+                <!-- Card 1 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h4>Pengajar Berpengalaman</h4>
+                    <p>Kami melaksanakan pendidikan tata busana secara optimal oleh instruktur mode dan praktisi penjahit profesional yang berpengalaman di bidang industri garmen dan fashion design.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h4>Jaringan Luas</h4>
+                    <p>Memiliki mitra kerja industri konveksi, garmen, dan butik ternama yang siap menyerap para lulusan berprestasi untuk langsung ditempatkan bekerja maupun magang industri.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h4>Kurikulum Terbaik</h4>
+                    <p>Menerapkan kurikulum berbasis kompetensi kerja (SKKNI) yang up-to-date, menghasilkan peserta didik yang cepat menguasai teknik pembuatan pola hingga finishing busana secara rapi.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Baru - Tentang Kami -->
-    <section id="tentang" class="tentang">
-        <div class="container">
-            <div class="tentang-wrapper">
-                <div class="tentang-teks">
-                    <h2>Mencetak Generasi Terampil & Mandiri</h2>
-                    <p><strong>Kursus Menjahit Harapan Umat</strong> adalah lembaga pelatihan tata busana terpercaya yang berdedikasi untuk mencetak tenaga terampil dan wirausahawan mandiri di bidang fashion.</p>
-                    <p>Kami menyediakan lingkungan belajar yang nyaman, fasilitas mesin jahit yang memadai, dan kurikulum yang disusun secara sistematis mulai dari tingkat dasar hingga mahir. Dibimbing oleh instruktur yang sabar dan berpengalaman, kami berkomitmen untuk membantu setiap peserta mewujudkan kreativitas mereka menjadi karya nyata yang bernilai jual tinggi.</p>
-                    <ul class="tentang-list">
-                        <li><i class="fa-solid fa-check"></i> Instruktur Profesional & Berpengalaman</li>
-                        <li><i class="fa-solid fa-check"></i> Kurikulum Terstruktur (Pola, Potong, Jahit, Finishing)</li>
-                        <li><i class="fa-solid fa-check"></i> Pendampingan Sampai Bisa & Mandiri</li>
-                    </ul>
+    <!-- 6. CALL TO ACTION BANNER -->
+    <section class="cta-banner">
+        <div class="cta-overlay"></div>
+        <div class="container cta-container">
+            <h3>Daftar Sekarang dan Mulai Karirmu!</h3>
+            <a href="https://wa.me/6281224074427" class="btn btn-cta-outline"><i class="fa-solid fa-phone"></i> Jadwalkan Pertemuan</a>
+        </div>
+    </section>
+
+    <!-- 7. PROGRAMS SECTION -->
+    <section id="program" class="programs-section">
+        <div class="container text-center">
+            <h3 class="section-title-center">Program Harapan Umat</h3>
+            <p class="section-subtitle-center">Jelajahi berbagai program pelatihan menjahit dan tata busana kami yang dirancang untuk mempersiapkan Anda menghadapi dunia kerja dan usaha mandiri.</p>
+            
+            <div class="programs-grid">
+                <!-- Program 1 -->
+                <div class="program-card">
+                    <div class="program-circle-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h4>Kelas Dasar (Basic Sewing)</h4>
+                    <p>Program pelatihan menjahit dasar yang ditujukan bagi pemula, mempelajari pengenalan mesin jahit, teknik tusuk dasar, pembuatan pola dasar rok dan blus selama 1-3 bulan.</p>
+                    <a href="#detail" class="btn btn-program-detail">Detail Program</a>
                 </div>
-                <div class="tentang-gambar">
-                    <img src="https://images.unsplash.com/photo-1605287528591-925232b7819e?auto=format&fit=crop&w=600&q=80" alt="Suasana Kursus Menjahit Harapan Umat">
+                <!-- Program 2 -->
+                <div class="program-card">
+                    <div class="program-circle-icon">
+                        <i class="fa-solid fa-toolbox"></i>
+                    </div>
+                    <h4>Kelas Terampil (Tokutei Ginou/Industri)</h4>
+                    <p>Program lanjutan fokus pada teknik menjahit cepat standar industri (garmen), pembuatan kemeja, celana formal, serta persiapan sertifikasi kompetensi kerja.</p>
+                    <a href="#detail" class="btn btn-program-detail">Detail Program</a>
+                </div>
+                <!-- Program 3 -->
+                <div class="program-card">
+                    <div class="program-circle-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h4>Tata Busana & Desain (Fashion Design)</h4>
+                    <p>Program komprehensif bagi yang ingin merintis butik mandiri. Mempelajari desain ilustrasi mode, pecah pola rumit, pembuatan kebaya, gaun malam, hingga manajemen bisnis clothing line.</p>
+                    <a href="#detail" class="btn btn-program-detail">Detail Program</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Galeri Prestasi -->
-    <section id="galeri" class="galeri">
-        <div class="container">
-            <div class="section-title">
-                <h2>Galeri Kegiatan & Karya</h2>
-                <p>Momen belajar dan hasil jahitan dari para peserta kursus Harapan Umat.</p>
-            </div>
-
-            <!-- Filter Buttons -->
-            <div class="filter-container">
-                <button class="filter-btn active" data-filter="semua">Semua</button>
-                <button class="filter-btn" data-filter="kegiatan">Kegiatan Belajar</button>
-                <button class="filter-btn" data-filter="karya">Hasil Karya</button>
-            </div>
-
-            <!-- Card Grid -->
-            <div class="grid-container">
-                <!-- ================= KARYA SATU ================= -->
-                <div class="card" data-category="karya">
-                    <div class="card-image">
-                        <img src="Karya-Satu.jpeg" alt="Hasil Karya Satu">
-                        <span class="badge">Hasil Karya</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Pembuatan Setelan Tunik Modern</h3>
-                        <p class="author">Hasil potongan pola presisi dan jahitan rapi dari kelas intermediate.</p>
-                    </div>
-                </div>
-
-                <!-- ================= KARYA DUA ================= -->
-                <div class="card" data-category="karya">
-                    <div class="card-image">
-                        <img src="Karya-Dua.jpeg" alt="Hasil Karya Dua">
-                        <span class="badge">Hasil Karya</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Gamis Pesta Brokat Keliling</h3>
-                        <p class="author">Kombinasi furing satin satin silk yang jatuh anggun dan mewah.</p>
-                    </div>
-                </div>
-
-                <!-- ================= KARYA TIGA ================= -->
-                <div class="card" data-category="karya">
-                    <div class="card-image">
-                        <img src="Karya-Tiga.jpeg" alt="Hasil Karya Tiga">
-                        <span class="badge">Hasil Karya</span>
-                    </div>
-                    <div class="card-content">
-                        <h3>Blus Kerja Kasual Wanita</h3>
-                        <p class="author">Desain kerah rebah dengan detail kancing bungkus yang manis.</p>
-                    </div>
-                </div>
-            </div> <!-- Penutup Grid Container -->
-        </div> <!-- Penutup Container Galeri -->
-    </section> <!-- Penutup Section Galeri -->
-
-    <!-- Section Testimoni -->
-    <section id="testimoni" class="testimoni">
-        <div class="container">
-            <div class="section-title">
-                <h2>Apa Kata Mereka?</h2>
-                <p>Kisah sukses dari peserta Kursus Menjahit Harapan Umat.</p>
-            </div>
-
-            <div class="testimoni-grid">
-                <div class="testimoni-card">
-                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-                    <p class="review">"Alhamdulillah, awalnya sama sekali nggak ngerti pegang mesin jahit. Setelah ikut kursus di Harapan Umat, sekarang saya sudah bisa nerima orderan jahit baju tetangga. Instrukturnya sangat sabar."</p>
-                    <div class="reviewer-info">
-                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
-                        <div>
-                            <h4>Ibu Siti</h4>
-                            <p>Ibu Rumah Tangga / Alumni</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimoni-card">
-                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-                    <p class="review">"Materi pecah polanya sangat mudah dipahami. Suasana belajarnya kekeluargaan banget. Sekarang saya sudah pede bikin baju seragam keluarga sendiri buat Lebaran."</p>
-                    <div class="reviewer-info">
-                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
-                        <div>
-                            <h4>Nisa</h4>
-                            <p>Mahasiswi / Peserta Kelas Mahir</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimoni-card">
-                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
-                    <p class="review">"Tempat kursus yang sangat *recommended*! Mesin jahitnya lengkap, diajarin dari motong kain sampai *finishing* yang rapi. Cocok banget buat yang mau buka usaha butik/tailor."</p>
-                    <div class="reviewer-info">
-                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
-                        <div>
-                            <h4>Rina Rahmawati</h4>
-                            <p>Pemilik Usaha Jahit Rumahan</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- 8. LEGALITY SECTION -->
+    <section id="legalitas" class="legalitas-section">
+        <div class="container text-center">
+            <h3 class="legalitas-title">Legalitas LPK Harapan Umat</h3>
+            <div class="logos-container">
+                <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=LA-LPK" alt="LA-LPK"></div>
+                <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=KEMENKUMHAM" alt="Kemenkumham"></div>
+                <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=DISNAKER" alt="Disnaker"></div>
+                <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=PEMKOT" alt="Pemkot"></div>
+                <div class="logo-item"><img src="https://via.placeholder.com/150x50?text=DISNAKERTRANS" alt="Disnakertrans"></div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <!-- Kolom 1: Info Brand & Sosial Media -->
-            <div class="footer-col brand-col">
-                <div class="footer-logo">Kursus Menjahit Harapan Umat.</div>
-                <p>Harapan Umat adalah lembaga kursus yang fokus di bidang menjahit, desain fashion, pecah pola, dan finishing busana untuk mencetak wirausahawan mandiri.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    <!-- 9. FOOTER -->
+    <footer id="kontak" class="main-footer">
+        <div class="container footer-grid">
+            <!-- Col 1: Brand -->
+            <div class="footer-col branding-col">
+                <div class="logo-area inverted">
+                    <div class="logo-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+                    <div class="logo-text">
+                        <h2>LPK HARAPAN UMAT</h2>
+                        <p>MAJU MAPAN BERSAMA</p>
+                    </div>
+                </div>
+                <p class="footer-about-text">
+                    LPK Harapan Umat Indonesia adalah lembaga pendidikan keterampilan kerja tata busana yang berkomitmen mendidik masyarakat menjadi tenaga terampil mandiri sejak berdiri.
+                </p>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
-
-            <!-- Kolom 2: Paket Kursus -->
+            <!-- Col 2: Quick Links -->
             <div class="footer-col">
-                <h4>PAKET KURSUS</h4>
-                <ul>
-                    <li><a href="tingkat-dasar.html">Kursus Menjahit Tingkat Dasar</a></li>
-                    <li><a href="#">Kursus Menjahit Tingkat Terampil</a></li>
-                    <li><a href="#">Kursus Menjahit Tingkat Mahir</a></li>
+                <h3>Tautan Langsung</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                    <li><a href="#program">Program</a></li>
+                    <li><a href="#galeri">Gallery</a></li>
+                    <li><a href="#kontak">Hubungi Kami</a></li>
                 </ul>
             </div>
-
-            <!-- Kolom 3: Kontak & Lokasi -->
+            <!-- Col 3: Services -->
             <div class="footer-col">
-                <h4>KONTAK & LOKASI</h4>
-                <p>Jl. Siliwangi No. 123,<br>
-                Kecamatan Tawang,<br>
-                Kota Tasikmalaya, Jawa Barat 46115</p>
-                <p class="wa-text">WA 088223391250</p>
+                <h3>Layanan</h3>
+                <ul class="footer-links">
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#alur">Alur Pendaftaran</a></li>
+                    <li><a href="#visi-misi">Visi & Misi</a></li>
+                </ul>
             </div>
-
-            <!-- Kolom 4: Jam Kerja -->
-            <div class="footer-col">
-                <h4>JAM KERJA</h4>
-                <p>SENIN s/d SABTU</p>
-                <p>09.00 WIB s/d 17.00 WIB</p>
-                <p>Sabtu, Minggu & HARI BESAR LIBUR</p>
+            <!-- Col 4: Info -->
+            <div class="footer-col info-col">
+                <h3>Informasi</h3>
+                <ul class="footer-info-list">
+                    <li><i class="fa-solid fa-phone"></i> +62 812-2407-4427</li>
+                    <li><i class="fa-solid fa-envelope"></i> harapanumat@gmail.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Jl. Cibaregbeg No. 56, Depan Kantor Kelurahan Tugujaya, Kecamatan Cihideung, Kota Tasikmalaya</li>
+                </ul>
             </div>
         </div>
-
-        <!-- Bagian Copyright Bawah -->
         <div class="footer-bottom">
-            <p>Copyright &copy; 2026 Kursus Menjahit Harapan Umat. All Right Reserved</p>
+            <div class="container text-center">
+                <p>&copy; 2026 Kursus Menjahit Harapan Umat. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/6288223391250" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Hubungi kami di WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <!-- Custom JS -->
-    <script src="script.js"></script>
 </body>
 </html>
