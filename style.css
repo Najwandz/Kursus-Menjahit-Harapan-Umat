@@ -1,704 +1,626 @@
-/* =========================================
-   1. RESET & BASE STYLES
-   ========================================= */
+/* -------------------------------------------------------------------------- */
+/* GLOBAL STYLES & RESET                                                      */
+/* -------------------------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    /* Palet Warna Tema "Community Guild" (Modern & Elegan) */
-    --color-bg: #fcfbf8;          /* Krem sangat muda */
-    --color-text: #333333;        /* Teks Abu Gelap */
-    --color-heading: #222222;     /* Teks Heading Hitam Lembut */
-    --color-primary: #5A3E2B;     /* Cokelat Gelap (Brand) */
-    --color-accent: #d8a860;      /* Kuning Oker / Mustard */
-    --color-accent-dark: #b58d55; /* Oker Gelap / Emas untuk Hover */
-    --color-white: #FFFFFF;
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Poppins', sans-serif;
-}
-
 body {
-    font-family: var(--font-body);
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    background-color: #ffffff;
     line-height: 1.6;
 }
 
+a {
+    text-style: none;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* =========================================
-   2. HEADER & NAVIGASI
-   ========================================= */
-.header {
-    background-color: rgba(255, 255, 255, 0.98);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    backdrop-filter: blur(5px);
+.text-center {
+    text-align: center;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 80px;
-    padding: 10px 20px;
+/* Colors Variables mapping LPK Shirokuma Brand Identity */
+:root {
+    --primary-purple: #5A2D81;
+    --dark-purple: #3f1670;
+    --light-lavender: #f1e8f8;
+    --gradient-start: #5A2D81;
+    --gradient-end: #8C52FF;
+    --accent-blue: #3B66AD;
+    --text-white: #ffffff;
+    --bg-dark: #0a0512;
 }
 
-.logo {
-    font-family: var(--font-heading);
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--color-primary);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--color-text);
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--color-accent-dark);
-}
-
-/* =========================================
-   3. HERO SECTION (MODERN EDITORIAL)
-   ========================================= */
-.hero-modern {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background-color: var(--color-bg);
-    padding-top: 100px;
-    padding-bottom: 50px;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-/* Kiri: Teks */
-.hero-text-box {
-    flex: 1;
-    max-width: 600px;
-    z-index: 2;
-}
-
-.hero-subtitle {
+/* Buttons */
+.btn {
     display: inline-block;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--color-accent-dark);
-    margin-bottom: 20px;
-    background-color: rgba(184, 134, 11, 0.1);
-    padding: 8px 16px;
-    border-radius: 30px;
-}
-
-.hero-text-box h1 {
-    font-family: var(--font-heading);
-    font-size: 4rem;
-    line-height: 1.15;
-    color: var(--color-primary);
-    margin-bottom: 25px;
-}
-
-.hero-text-box h1 span {
-    color: var(--color-accent);
-    font-style: italic;
-}
-
-.hero-text-box p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 40px;
-    line-height: 1.8;
-}
-
-/* Tombol Aksi */
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 15px 30px;
-    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 25px;
     font-weight: 500;
-    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: var(--color-accent-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(184, 134, 11, 0.2);
 }
 
 .btn-outline {
-    display: inline-flex;
-    align-items: center;
-    color: var(--color-primary);
-    padding: 15px 0;
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease;
+    border: 2px solid var(--primary-purple);
+    color: var(--primary-purple);
+    background: transparent;
 }
 
 .btn-outline:hover {
-    color: var(--color-accent-dark);
-    border-bottom: 2px solid var(--color-accent-dark);
+    background-color: var(--primary-purple);
+    color: white;
 }
 
-/* Kanan: Gambar Estetik (Arch Shape) */
-.hero-image-wrapper {
-    flex: 1;
-    position: relative;
+.btn-primary {
+    background-color: var(--accent-blue);
+    color: white;
+    font-weight: 600;
+    padding: 12px 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+    background-color: #2e528d;
+    transform: translateY(-2px);
+}
+
+.btn-purple {
+    background-color: var(--primary-purple);
+    color: white;
+    border-radius: 6px;
+}
+
+.btn-purple:hover {
+    background-color: var(--dark-purple);
+}
+
+.btn-cta-outline {
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 12px 30px;
+}
+
+.btn-cta-outline:hover {
+    background-color: white;
+    color: var(--primary-purple);
+}
+
+.btn-program-detail {
+    border: 1px solid var(--primary-purple);
+    color: var(--primary-purple);
+    background: transparent;
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-size: 13px;
+}
+
+.btn-program-detail:hover {
+    background-color: var(--primary-purple);
+    color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 1. TOP BAR STYLES                                                          */
+/* -------------------------------------------------------------------------- */
+.top-bar {
+    background-color: var(--dark-purple);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.top-bar-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.hero-image-wrapper img {
-    width: 90%;
-    max-width: 450px;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 250px 250px 20px 20px;
-    box-shadow: -15px 20px 40px rgba(0, 0, 0, 0.08);
+.top-bar-left a {
+    margin-right: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* Elemen Dekoratif Badge */
-.experience-badge {
-    position: absolute;
-    bottom: 40px;
-    left: 20px;
-    background-color: var(--color-white);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: float 4s ease-in-out infinite;
+.top-bar-left a:hover {
+    color: #D6BBF5;
 }
 
-.experience-badge .stars {
-    color: var(--color-accent);
-    font-size: 1.2rem;
-    margin-bottom: 5px;
+.top-bar-right .lang-selector {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-.experience-badge p {
-    font-family: var(--font-heading);
-    font-size: 0.95rem;
+/* -------------------------------------------------------------------------- */
+/* 2. HEADER / NAVBAR STYLES                                                 */
+/* -------------------------------------------------------------------------- */
+.main-header {
+    background-color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 32px;
+    color: var(--primary-purple);
+}
+
+.logo-text h1 {
+    font-size: 18px;
     font-weight: 700;
-    color: var(--color-primary);
-    margin: 0;
-    line-height: 1.3;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
 }
 
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+.logo-text p {
+    font-size: 11px;
+    font-weight: 500;
+    color: #666;
+    letter-spacing: 1px;
 }
 
-/* =========================================
-   4. TENTANG KAMI
-   ========================================= */
-.tentang {
-    padding: 100px 0;
-    background-color: var(--color-white);
+.main-nav ul {
+    display: flex;
+    gap: 28px;
 }
 
-.tentang-wrapper {
+.main-nav ul li a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #444444;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: var(--primary-purple);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 3. HERO SECTION STYLES                                                     */
+/* -------------------------------------------------------------------------- */
+.hero-section {
+    position: relative;
+    /* High quality sewing/tailoring banner placeholder image */
+    background: url('https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(63, 22, 112, 0.75) 0%, rgba(140, 82, 255, 0.4) 100%);
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero-title {
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    /* Mimic the unique tech font structure if needed, or stick to ultra-bold Poppins */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+/* -------------------------------------------------------------------------- */
+/* 4. ABOUT SECTION STYLES                                                   */
+/* -------------------------------------------------------------------------- */
+.about-section {
+    padding: 70px 0;
+    background-color: #ffffff;
+}
+
+.about-container {
     display: flex;
     align-items: center;
     gap: 50px;
 }
 
-.tentang-teks {
+.about-image {
     flex: 1;
 }
 
-.tentang-teks h2 {
-    font-family: var(--font-heading);
-    font-size: 2.2rem;
-    color: var(--color-primary);
-    margin-bottom: 20px;
-    line-height: 1.3;
-}
-
-.tentang-teks p {
-    color: #555;
-    margin-bottom: 15px;
-    font-size: 1.05rem;
-}
-
-.tentang-list {
-    list-style: none;
-    margin-top: 25px;
-}
-
-.tentang-list li {
-    margin-bottom: 12px;
-    color: var(--color-text);
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.tentang-list i {
-    color: var(--color-accent-dark);
-    font-size: 1.2rem;
-}
-
-.tentang-gambar {
-    flex: 1;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.tentang-gambar img {
+.about-image img {
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     width: 100%;
-    height: auto;
+    height: 380px;
+    object-fit: cover;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.section-tag {
     display: block;
-    transition: transform 0.5s ease;
-}
-
-.tentang-gambar:hover img {
-    transform: scale(1.05);
-}
-
-/* =========================================
-   5. GALERI & KARYA
-   ========================================= */
-.galeri {
-    padding: 100px 0;
-    background-color: var(--color-bg);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary-purple);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
 }
 
 .section-title {
-    text-align: center;
-    margin-bottom: 50px;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark-purple);
+    margin-bottom: 20px;
 }
 
-.section-title h2 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    color: var(--color-primary);
-    margin-bottom: 10px;
+.section-desc {
+    font-size: 15px;
+    color: #666666;
+    margin-bottom: 30px;
+    line-height: 1.7;
 }
 
-.section-title p {
-    color: #666;
+/* -------------------------------------------------------------------------- */
+/* 5. BENEFITS SECTION STYLES                                                */
+/* -------------------------------------------------------------------------- */
+.benefits-section {
+    padding: 75px 0;
+    background: linear-gradient(to bottom, #ffffff 0%, var(--light-lavender) 100%);
 }
 
-.filter-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
+.section-title-center {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark-purple);
+    margin-bottom: 12px;
 }
 
-.filter-btn {
-    background: transparent;
-    border: 1px solid var(--color-primary);
-    color: var(--color-primary);
-    padding: 8px 24px;
-    font-family: var(--font-body);
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: all 0.3s ease;
+.section-subtitle-center {
+    font-size: 15px;
+    color: #666666;
+    max-width: 750px;
+    margin: 0 auto 50px auto;
 }
 
-.filter-btn:hover, .filter-btn.active {
-    background: var(--color-primary);
-    color: var(--color-white);
-}
-
-.grid-container {
+.benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-.card {
-    background: var(--color-white);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.card:hover {
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-.card.hide {
-    display: none;
-}
-
-.card-image {
-    position: relative;
-    height: 350px;
-    overflow: hidden;
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.card:hover .card-image img {
-    transform: scale(1.1);
-}
-
-.badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background-color: var(--color-accent-dark);
-    color: var(--color-white);
-    padding: 5px 12px;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 3px;
-    z-index: 2;
-}
-
-.card-content {
-    padding: 20px;
+.benefit-card {
+    background: linear-gradient(145deg, #4A154B, #6A257B);
+    border-radius: 20px;
+    padding: 40px 30px;
+    color: white;
     text-align: center;
-}
-
-.card-content h3 {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    color: var(--color-primary);
-    margin-bottom: 5px;
-}
-
-.card-content .author {
-    font-size: 0.9rem;
-    color: #777;
-}
-
-/* =========================================
-   6. TESTIMONI
-   ========================================= */
-.testimoni {
-    padding: 100px 0;
-    background-color: var(--color-white); 
-}
-
-.testimoni-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.testimoni-card {
-    background-color: var(--color-bg);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-    position: relative;
+    box-shadow: 0 10px 20px rgba(90, 45, 129, 0.15);
     transition: transform 0.3s ease;
 }
 
-.testimoni-card:hover {
+.benefit-card:hover {
     transform: translateY(-5px);
 }
 
-.quote-icon {
-    font-size: 30px;
-    color: var(--color-accent);
-    opacity: 0.3;
+.benefit-icon {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.benefit-card h4 {
+    font-size: 19px;
+    font-weight: 600;
     margin-bottom: 15px;
 }
 
-.review {
-    font-size: 0.95rem;
-    color: #555;
-    font-style: italic;
-    line-height: 1.8;
+.benefit-card p {
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 6. CALL TO ACTION BANNER STYLES                                            */
+/* -------------------------------------------------------------------------- */
+.cta-banner {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(90, 45, 129, 0.85);
+    z-index: 1;
+}
+
+.cta-container {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.cta-container h3 {
+    font-size: 28px;
+    font-weight: 600;
     margin-bottom: 25px;
 }
 
-.reviewer-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border-top: 1px solid #ddd;
-    padding-top: 15px;
+/* -------------------------------------------------------------------------- */
+/* 7. PROGRAMS SECTION STYLES                                                */
+/* -------------------------------------------------------------------------- */
+.programs-section {
+    padding: 75px 0;
+    background-color: var(--light-lavender);
 }
 
-.reviewer-avatar {
-    width: 45px;
-    height: 45px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.program-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 45px 30px 35px 30px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid rgba(90, 45, 129, 0.08);
+}
+
+.program-circle-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #e0cfea, #f1e8f8);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    margin: 0 auto 25px auto;
+    font-size: 28px;
+    color: var(--primary-purple);
 }
 
-.reviewer-info h4 {
-    font-size: 1rem;
-    font-family: var(--font-heading);
-    color: var(--color-primary);
-    margin-bottom: 3px;
+.program-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-purple);
+    margin-bottom: 15px;
 }
 
-.reviewer-info p {
-    font-size: 0.8rem;
-    color: #888;
+.program-card p {
+    font-size: 13.5px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    height: 100px; /* Aligns buttons uniformly */
 }
 
-/* =========================================
-   7. FOOTER & COPYRIGHT
-   ========================================= */
-.footer {
-    background-color: #fcfcfc;
-    padding-top: 70px;
-    border-top: 1px solid #eaeaea;
-    color: #444;
+/* -------------------------------------------------------------------------- */
+/* 8. LEGALITY SECTION STYLES                                               */
+/* -------------------------------------------------------------------------- */
+.legalitas-section {
+    padding: 55px 0;
+    background-color: white;
 }
 
-.footer-container {
+.legalitas-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--dark-purple);
+    margin-bottom: 35px;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo-item img {
+    max-height: 45px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.logo-item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 9. FOOTER STYLES                                                           */
+/* -------------------------------------------------------------------------- */
+.main-footer {
+    background-color: var(--bg-dark);
+    color: rgba(255,255,255,0.75);
+    padding: 70px 0 20px 0;
+    font-size: 13.5px;
+}
+
+.footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 1.3fr 0.8fr 0.8fr 1.1fr;
     gap: 40px;
     margin-bottom: 50px;
 }
 
-.footer-col h4 {
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    color: var(--color-primary);
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.footer-col h3 {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
 }
 
-.footer-col p {
-    font-size: 0.95rem;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    color: #555;
+.logo-area.inverted .logo-icon {
+    color: white;
 }
 
-.brand-col .footer-logo {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
+.logo-area.inverted .logo-text h2 {
+    font-size: 18px;
+    color: white;
     font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: 15px;
 }
 
-.social-links {
+.logo-area.inverted .logo-text p {
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-about-text {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.social-icons {
     display: flex;
     gap: 10px;
-    margin-top: 20px;
 }
 
-.social-links a {
+.social-link {
+    width: 34px;
+    height: 34px;
+    background-color: #231932;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+    color: white;
+    font-size: 14px;
 }
 
-.social-links a:nth-child(1):hover { background-color: #1877F2; } 
-.social-links a:nth-child(2):hover { background-color: #000000; } 
-.social-links a:nth-child(3):hover { background-color: #0A66C2; } 
-.social-links a:nth-child(4):hover { background-color: #E4405F; } 
-.social-links a:nth-child(5):hover { background-color: #FF0000; } 
-
-.footer-col ul {
-    list-style: none;
+.social-link:hover {
+    background-color: var(--primary-purple);
 }
 
-.footer-col ul li {
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer-info-list li {
     margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
 }
 
-.footer-col ul li a {
-    text-decoration: none;
-    color: #555;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
-}
-
-.footer-col ul li a:hover {
-    color: var(--color-accent-dark);
-}
-
-.wa-text {
-    font-weight: 600;
-    color: var(--color-primary) !important;
-    margin-top: 10px;
+.footer-info-list li i {
+    color: var(--primary-purple);
+    margin-top: 4px;
 }
 
 .footer-bottom {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
 }
 
-/* =========================================
-   8. WHATSAPP FLOATING BUTTON
-   ========================================= */
-.wa-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 35px;
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    animation: pulse-animation 2s infinite;
-    transition: background-color 0.3s ease;
-}
-
-.wa-float:hover {
-    background-color: #128C7E;
-}
-
-@keyframes pulse-animation {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-
-/* =========================================
-   9. MEDIA QUERIES (RESPONSIVE)
-   ========================================= */
+/* -------------------------------------------------------------------------- */
+/* RESPONSIVE DESIGN (MEDIA QUERIES)                                         */
+/* -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
-    /* Hero */
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-        margin-top: 30px;
+    .benefits-grid, .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .hero-text-box h1 {
-        font-size: 3.2rem;
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .hero-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .hero-image-wrapper {
-        justify-content: center;
-        width: 100%;
-    }
-    .experience-badge {
-        left: 0;
-        bottom: 20px;
-    }
-    
-    /* Tentang Kami */
-    .tentang-wrapper {
+    .about-container {
         flex-direction: column;
     }
-
-    /* Footer */
-    .footer-container {
-        grid-template-columns: 1fr 1fr; 
+    .hero-title {
+        font-size: 40px;
     }
 }
 
 @media (max-width: 768px) {
-    /* Header */
-    .nav-container {
-        flex-direction: column;
-        justify-content: center;
-        gap: 15px;
+    .main-nav {
+        display: none; /* Can be replaced with a hamburger menu */
     }
-    .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .hero-modern { 
-        padding-top: 150px; 
-    }
-    .hero-text-box h1 {
-        font-size: 2.5rem;
-    }
-    
-    /* Footer */
-    .footer-container {
+    .benefits-grid, .programs-grid, .footer-grid {
         grid-template-columns: 1fr;
-        text-align: center;
-        gap: 30px;
     }
-    .social-links {
-        justify-content: center;
+    .top-bar {
+        display: none;
     }
 }
